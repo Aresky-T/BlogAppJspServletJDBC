@@ -1,0 +1,47 @@
+CREATE DATABASE IF NOT EXISTS `blog_test`;
+
+USE `blog_test`;
+
+--
+
+-- Table structure for table `articles`
+
+--
+
+DROP TABLE IF EXISTS `articles`;
+
+CREATE TABLE
+    `articles` (
+        `id` int NOT NULL AUTO_INCREMENT,
+        `title` varchar(255) NOT NULL,
+        `summary` text NOT NULL,
+        `content` text NOT NULL,
+        `publicationDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (`id`),
+        UNIQUE KEY `title` (`title`)
+    ) ENGINE = InnoDB AUTO_INCREMENT = 3 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+
+--
+
+-- Dumping data for table `articles`
+
+--
+
+/*!40000 ALTER TABLE `articles` DISABLE KEYS */
+
+;
+
+INSERT INTO `articles`
+VALUES (
+        1,
+        'Host là gì, t&#7841;i sao ph&#7843;i thuê? ',
+        'Trong th&#7901;i gian v&#7915;a qua, mình có nh&#7853;n &#273;&#432;&#7907;c r&#7845;t nhi&#7873;u th&#7855;c m&#7855;c liên quan &#273;&#7871;n v&#7845;n &#273;&#7873; b&#7889;i r&#7889;i tr&#432;&#7899;c nh&#7919;ng câu h&#7887;i tr&#432;&#7899;c khi mua hosting, VPS ho&#7863;c Dedicated Server. Th&#7853;t s&#7921; mà nói, hi&#7879;n nay ch&#432;a có tài li&#7879;u ti&#7871;ng Vi&#7879;t nào &#273;&#7875; gi&#7843;i thích rõ nh&#7919;ng v&#7845;n &#273;&#7873; c&#7847;n bi&#7871;t cho nh&#7919;ng ng&#432;&#7901;i c&#7847;n tham kh&#7843;o tr&#432;&#7899;c khi b&#7887; ti&#7873;n ra thuê host.',
+        '<h3>1.1) Host là gì?</h3>\r\n<br/>\r\nHost trong ti&#7871;ng Anh d&#7883;ch ra có r&#7845;t nhi&#7873;u ngh&#297;a, trong &#273;ó ngh&#297;a dành cho nghành công ngh&#7879; thông tin là máy ch&#7911;. Host ngh&#297;a là m&#7897;t máy tính có c&#7845;u hình r&#7845;t m&#7841;nh, &#273;&#432;&#7907;c &#273;&#7863;t t&#7841;i m&#7897;t v&#7883; trí chuyên bi&#7879;t dành cho máy ch&#7911; (Datacenter), &#273;&#432;&#7907;c k&#7871;t n&#7889;i &#273;&#432;&#7901;ng truy&#7873;n internet t&#7889;c &#273;&#7897; cao &#273;&#7875; phân tán d&#7919; li&#7879;u lên môi tr&#432;&#7901;ng internet b&#7857;ng cách cho phép ng&#432;&#7901;i dùng t&#7843;i d&#7919; li&#7879;u ho&#7863;c g&#7917;i d&#7919; li&#7879;u lên.\r\n<br/><br/>\r\nTrong WordPress, mã ngu&#7891;n c&#7911;a h&#7885; s&#7917; d&#7909;ng ngôn ng&#7919; server-side PHP (ngh&#297;a là &#273;&#432;&#7907;c biên d&#7883;ch và x&#7917; lý b&#7903;i môi tr&#432;&#7901;ng server) và h&#7879; qu&#7843;n tr&#7883; c&#417; s&#7903; d&#7919; li&#7879;u (database) MySQL nên b&#7841;n c&#7847;n có m&#7897;t cái host có h&#7895; tr&#7907; ch&#432;&#417;ng trình biên d&#7883;ch và x&#7917; lý PHP, &#273;&#7891;ng th&#7901;i có cài MySQL Client &#273;&#7875; x&#7917; lý truy v&#7845;n trong database.\r\n<br/>\r\nNói nôm na r&#7857;ng, n&#7871;u b&#7841;n s&#7917; d&#7909;ng WordPress.Org thì b&#7841;n c&#7847;n ph&#7843;i có m&#7897;t cái host thì b&#7841;n m&#7899;i ch&#7841;y nó &#273;&#432;&#7907;c. T&#7915; &#273;ó b&#7841;n m&#7899;i có th&#7875; &#273;&#432;a website c&#7911;a mình lên internet.\r\n<br/><br/>\r\n<h3>1.2) S&#7921; liên quan gi&#7919;a Host và Domain (tên mi&#7873;n)</h3>\r\n<br/>\r\nTrong bài này mình không nói nhi&#7873;u v&#7873; domain nh&#432;ng khi nh&#7855;c qua host mình c&#361;ng nên nói qua nó m&#7897;t chút &#273;&#7875; n&#7871;u b&#7841;n nào còn th&#7855;c m&#7855;c thì có mà &#273;&#7885;c. Các khái ni&#7879;m v&#7873; domain thì mình &#273;ã có gi&#7843;i thích t&#7841;i &#273;ây nên b&#7841;n ch&#7883;u khó vào &#273;&#7885;c nhé.\r\n<br/><br/>\r\n<h3/>1.3) Thuê host hay là mua host?</h3>\r\n<br/>\r\nCái này ch&#7881; là v&#7845;n &#273;&#7873; nh&#7887; thôi nh&#432;ng vi&#7879;c bi&#7871;t nó c&#361;ng ít nhi&#7873;u gì c&#361;ng có ích.\r\n<br/>\r\nN&#7871;u nói v&#7873; host, thì b&#7841;n có th&#7875; g&#7885;i là mua host ho&#7863;c thuê host gì c&#361;ng &#273;&#432;&#7907;c, nh&#432;ng chính xác nh&#7845;t thì là thuê host. S&#7903; d&#297; chúng ta g&#7885;i là thuê b&#7903;i vì b&#7841;n ph&#7843;i tr&#7843; ti&#7873;n s&#7917; d&#7909;ng theo hàng tháng vì chi phí cho các th&#7913; nh&#432; m&#7841;ng, c&#417; s&#7903; h&#7841; t&#7847;ng c&#7911;a datacenter, t&#7911; rack &#273;&#7921;ng máy ch&#7911;, máy ch&#7911; v&#7853;t lý &#273;&#7873;u là c&#7911;a h&#7885;.',
+        '2023-09-14 01:24:19'
+    ), (
+        2,
+        '[GIT] GIT VÀ GITHUB LÀ GÌ? T&#7840;I SAO NÊN DÙNG? ',
+        'Có hai anh chàng l&#7853;p trình viên &#273;ang h&#7907;p tác v&#7899;i nhau cùng xây d&#7921;ng m&#7897;t ph&#7847;n m&#7873;m cho khách hàng. D&#297; nhiên hai anh chàng này s&#7869; làm vi&#7879;c v&#7899;i nhau b&#7857;ng cách m&#7895;i ng&#432;&#7901;i t&#7921; vi&#7871;t code m&#7897;t ít và g&#7917;i cho nhau qua email ho&#7863;c m&#7897;t ph&#432;&#417;ng th&#7913;c g&#7917;i d&#7919; li&#7879;u thông th&#432;&#7901;ng nào &#273;ó. M&#7895;i ng&#432;&#7901;i sau khi nh&#7853;n &#273;&#432;&#7907;c code c&#7911;a nhau s&#7869; ti&#7871;n hành t&#7921; xem và s&#7917;a l&#7841;i, sau &#273;ó cùng nhau ráp n&#7889;i vào ph&#7847;n m&#7873;m mà h&#7885; c&#7847;n làm. Tuy nhiên, m&#7897;t hôm anh A b&#7895;ng nhiên vô tình vi&#7871;t code sai vào ph&#7847;n m&#7873;m d&#7851;n t&#7899;i s&#7843;n ph&#7849;m b&#7883; l&#7895;i mà tr&#432;&#7899;c &#273;ó c&#7843; hai anh &#273;&#7873;u không h&#7873; sao l&#432;u l&#7841;i do ph&#7847;n m&#7873;m quá l&#7899;n. Và th&#7871; là hai anh l&#7841;i cùng nhau xây d&#7921;ng l&#7841;i tính n&#259;ng b&#7883; l&#7895;i và ti&#7871;p t&#7909;c g&#7917;i cho nhau nh&#432; v&#7853;y.',
+        '<h3>Git là gì?</h3>\r\n<br/>\r\nGit là tên g&#7885;i c&#7911;a m&#7897;t H&#7879; th&#7889;ng qu&#7843;n lý phiên b&#7843;n phân tán (Distributed Version Control System  DVCS) là m&#7897;t trong nh&#7919;ng h&#7879; th&#7889;ng qu&#7843;n lý phiên b&#7843;n phân tán ph&#7893; bi&#7871;n nh&#7845;t hi&#7879;n nay. DVCS ngh&#297;a là h&#7879; th&#7889;ng giúp m&#7895;i máy tính có th&#7875; l&#432;u tr&#7919; nhi&#7873;u phiên b&#7843;n khác nhau c&#7911;a m&#7897;t mã ngu&#7891;n &#273;&#432;&#7907;c nhân b&#7843;n (clone) t&#7915; m&#7897;t kho ch&#7913;a mã ngu&#7891;n (repository), m&#7895;i thay &#273;&#7893;i vào mã ngu&#7891;n trên máy tính s&#7869; có th&#7875; &#7911;y thác (commit) r&#7891;i &#273;&#432;a lên máy ch&#7911; n&#417;i &#273;&#7863;t kho ch&#7913;a chính. Và m&#7897;t máy tính khác (n&#7871;u h&#7885; có quy&#7873;n truy c&#7853;p) c&#361;ng có th&#7875; clone l&#7841;i mã ngu&#7891;n t&#7915; kho ch&#7913;a ho&#7863;c clone l&#7841;i m&#7897;t t&#7853;p h&#7907;p các thay &#273;&#7893;i m&#7899;i nh&#7845;t trên máy tính kia. Trong Git, th&#432; m&#7909;c làm vi&#7879;c trên máy tính g&#7885;i là Working Tree. &#272;&#7841;i lo&#7841;i là nh&#432; v&#7853;y.\r\n<br/>\r\nGit là tên g&#7885;i c&#7911;a m&#7897;t H&#7879; th&#7889;ng qu&#7843;n lý phiên b&#7843;n phân tán (Distributed Version Control System  DVCS) là m&#7897;t trong nh&#7919;ng h&#7879; th&#7889;ng qu&#7843;n lý phiên b&#7843;n phân tán ph&#7893; bi&#7871;n nh&#7845;t hi&#7879;n nay. DVCS ngh&#297;a là h&#7879; th&#7889;ng giúp m&#7895;i máy tính có th&#7875; l&#432;u tr&#7919; nhi&#7873;u phiên b&#7843;n khác nhau c&#7911;a m&#7897;t mã ngu&#7891;n &#273;&#432;&#7907;c nhân b&#7843;n (clone) t&#7915; m&#7897;t kho ch&#7913;a mã ngu&#7891;n (repository), m&#7895;i thay &#273;&#7893;i vào mã ngu&#7891;n trên máy tính s&#7869; có th&#7875; &#7911;y thác (commit) r&#7891;i &#273;&#432;a lên máy ch&#7911; n&#417;i &#273;&#7863;t kho ch&#7913;a chính. Và m&#7897;t máy tính khác (n&#7871;u h&#7885; có quy&#7873;n truy c&#7853;p) c&#361;ng có th&#7875; clone l&#7841;i mã ngu&#7891;n t&#7915; kho ch&#7913;a ho&#7863;c clone l&#7841;i m&#7897;t t&#7853;p h&#7907;p các thay &#273;&#7893;i m&#7899;i nh&#7845;t trên máy tính kia. Trong Git, th&#432; m&#7909;c làm vi&#7879;c trên máy tính g&#7885;i là Working Tree. &#272;&#7841;i lo&#7841;i là nh&#432; v&#7853;y.\r\n<br/>\r\nC&#417; ch&#7871; l&#432;u tr&#7919; phiên b&#7843;n c&#7911;a Git là nó s&#7869; t&#7841;o ra m&#7897;t &#7843;nh ch&#7909;p (snapshot) trên m&#7895;i t&#7853;p tin và th&#432; m&#7909;c sau khi commit, t&#7915; &#273;ó nó có th&#7875; cho phép b&#7841;n tái s&#7917; d&#7909;ng l&#7841;i m&#7897;t &#7843;nh ch&#7909;p nào &#273;ó mà b&#7841;n có th&#7875; hi&#7875;u &#273;ó là m&#7897;t phiên b&#7843;n. &#272;ây c&#361;ng chính là l&#7907;i th&#7871; c&#7911;a Git so v&#7899;i các DVCS khác khi nó không l&#432;u c&#7913;ng d&#7919; li&#7879;u mà s&#7869; l&#432;u v&#7899;i d&#7841;ng snapshot.\r\n<br/><br/>\r\n<h3>Github là gì?</h3>\r\n<br/>\r\nMình bi&#7871;t là có r&#7845;t nhi&#7873;u b&#7841;n khi nghe nói &#273;&#7871;n Git s&#7869; ngh&#297; ngay &#273;&#7871;n Github và có th&#7875; s&#7869; có m&#7897;t s&#7889; hi&#7875;u l&#7847;m v&#7899;i h&#7885;. C&#361;ng xin nh&#7855;c l&#7841;i r&#7857;ng, Git là tên g&#7885;i c&#7911;a m&#7897;t mô hình h&#7879; th&#7889;ng. Nh&#432; mình &#273;ã gi&#7843;i thích &#7903; trên, các máy tính có th&#7875; clone l&#7841;i mã ngu&#7891;n t&#7915; m&#7897;t repository và <b>Github chính là m&#7897;t d&#7883;ch v&#7909; máy ch&#7911; repository công c&#7897;ng</b>, m&#7895;i ng&#432;&#7901;i có th&#7875; t&#7841;o tài kho&#7843;n trên &#273;ó &#273;&#7875; t&#7841;o ra các kho ch&#7913;a c&#7911;a riêng mình &#273;&#7875; có th&#7875; làm vi&#7879;c.\r\n',
+        '2023-09-14 01:43:33'
+    );

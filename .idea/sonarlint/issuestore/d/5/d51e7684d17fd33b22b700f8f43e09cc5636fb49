@@ -1,0 +1,37 @@
+
+i
+java:S1104"TMake username a static final constant or non-public and provide accessors if needed.(£›·{
+o
+java:S1104"TMake password a static final constant or non-public and provide accessors if needed.(óÒö¢ùÿÿÿÿ
+l
+java:S1104"VMake jdbcDriver a static final constant or non-public and provide accessors if needed.(ÈÀéÙ
+i
+java:S1104"TMake imageSrc a static final constant or non-public and provide accessors if needed.(Ğú€d
+o
+java:S1104"YMake imageSrcAdmin a static final constant or non-public and provide accessors if needed.(­Æ—ÿ
+m
+java:S1104	"RMake footer a static final constant or non-public and provide accessors if needed.(ÄŸãøÿÿÿÿ
+s
+java:S1104
+"QMake style a static final constant or non-public and provide accessors if needed.(€äÛšùÿÿÿÿ8¦Ãñ¨1
+x
+java:S1104"VMake styleAdmin a static final constant or non-public and provide accessors if needed.(é°úİùÿÿÿÿ8ß¼”ô¨1
+C
+java:S1444".Make this "public static username" field final(£›·{
+I
+java:S1444".Make this "public static password" field final(óÒö¢ùÿÿÿÿ
+F
+java:S1444"0Make this "public static jdbcDriver" field final(ÈÀéÙ
+C
+java:S1444".Make this "public static imageSrc" field final(Ğú€d
+I
+java:S1444"3Make this "public static imageSrcAdmin" field final(­Æ—ÿ
+G
+java:S1444	",Make this "public static footer" field final(ÄŸãøÿÿÿÿ
+M
+java:S1444
+"+Make this "public static style" field final(€äÛšùÿÿÿÿ8§Ãñ¨1
+R
+java:S1444"0Make this "public static styleAdmin" field final(é°úİùÿÿÿÿ8à¼”ô¨1
+P
+java:S1118":Add a private constructor to hide the implicit public one.(Óùÿ¿

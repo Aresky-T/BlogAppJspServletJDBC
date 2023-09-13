@@ -1,0 +1,24 @@
+
+t
+java:S2293'"YReplace the type specification in this constructor call with the diamond operator ("<>").(˜âÓ—ÿÿÿÿÿ
+]
+java:S2095*"GUse try-with-resources or close this "Statement" in a "finally" clause.(‹½»
+]
+java:S2095`"GUse try-with-resources or close this "Statement" in a "finally" clause.(‹½»
+]
+java:S2095w"GUse try-with-resources or close this "Statement" in a "finally" clause.(‹½»
+]
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(‹½»
+]
+java:S2095D"GUse try-with-resources or close this "Statement" in a "finally" clause.(‹½»
+P
+java:S1118":Add a private constructor to hide the implicit public one.(Äáœ
+E	java:S106!"+Replace this use of System.out by a logger.(§±¸…úÿÿÿÿ
+E	java:S1069"+Replace this use of System.out by a logger.(§±¸…úÿÿÿÿ
+Q	java:S125O"<This block of commented-out lines of code should be removed.(€®”¬
+@	java:S106S"+Replace this use of System.out by a logger.(è±Û
+@	java:S106V"+Replace this use of System.out by a logger.(àá¹ 
+Q	java:S125g"<This block of commented-out lines of code should be removed.(€®”¬
+@	java:S106m"+Replace this use of System.out by a logger.(àá¹ 
+Q	java:S125y"<This block of commented-out lines of code should be removed.(€®”¬
+@	java:S106"+Replace this use of System.out by a logger.(àá¹ 
